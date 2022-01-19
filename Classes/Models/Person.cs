@@ -35,8 +35,9 @@ namespace Classes.Models {
 			// This is a PARAMETERLESS constructor.			
 		}
 
-		// Constructors are overridable.
+		// Constructors are overloadable.
 		public Person(DateTime dob) {
+			// Constructors can house initialization logic.
 			this.DateOfBirth = dob;
 		}
 	}
