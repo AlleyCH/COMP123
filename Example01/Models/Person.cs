@@ -1,15 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Classes.Models {
+namespace Example01.Models {
 	public class Person {
 		// Properties
 		public string Name { get; set; }
 		public double Height { get; set; }
 		public DateTime DateOfBirth { get; set; }
+		public int Age { 
+			get {
+				int age = DateTime.Now.Year - this.DateOfBirth.Year;
+
+				if (DateTime.Now.DayOfYear < this.DateOfBirth.DayOfYear) {
+					age--;
+				}
+
+				return age;
+			}
+		}
 
 		// Methods
 

@@ -1,7 +1,7 @@
-﻿using System;
-using Classes.Models;
+﻿using Example01.Models;
+using System;
 
-namespace Classes {
+namespace Example01 {
 	class Program {
 		static void Main(string[] args) {
 			Person john = new Person();
@@ -11,6 +11,7 @@ namespace Classes {
 
 			Person joanne = new Person(new DateTime(1990, 2, 28));
 
+			Console.WriteLine(joanne.Age);
 		}
 	}
 }
