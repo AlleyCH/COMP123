@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace Example02.Models {
 	public class Product {
-		private double price;
+		// FIELDS
+		private double price; // <-- Price value is stored here.
 
+		// PROPERTIES
 		public string ProductID { get; set; }
 		public string Name { get; set; }
-		public string Brand { get; set; }
-		public double Price { 
+		public string Description { get; set; }
+		public double Price { // Fully-implemented property. Needs a field to assist with calculation.
 			get {
 				return this.price;
 			}
 			set {
-				if (value >= 0) {
-					this.price = value;
+				if (value >= 0) { // If passes validation...
+					this.price = value; // Value is stored in private field
 				}
 				else {
 					// Ignore.
