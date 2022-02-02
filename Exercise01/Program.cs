@@ -8,7 +8,7 @@ namespace Exercise01 {
 		1. Create a Customer class. Feel free to define the appropriate properties as you see fit.
 		2. Create an Address class. Feel free to define the appropriate properties as you see fit.
 		3. In your Customer class, implement a new static method, CreateCustomer. 
-		   This method takes in a string parameter, name, as well as a DateTime parameter, dateOfBirth.
+		   This method takes in string parameters for first name and last name, as well as a DateTime parameter for date of birth.
 		   When this method is called, a new Customer object should be created and returned, with its
 		   properties properly initialized.
 		4. In your Customer class, implement a new non-static method, RegisterAddress.
