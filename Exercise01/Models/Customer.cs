@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 namespace Exercise01.Models {
 	public class Customer {
 		public string CustomerID { get; private set; }
-		public string Name { get; set; }
-		public string Email { get; set; }
+		public string FirstName { get; set; }
+		public string LastName { get; set; }
 		public DateTime DateOfBirth { get; set; }
+		public string Phone { get; set; }
 		public List<Address> Addresses { get; set; }
 
 		public Customer() {
@@ -17,10 +18,11 @@ namespace Exercise01.Models {
 			this.Addresses = new List<Address>();
 		}
 
-		public static Customer CreateCustomer(string name, DateTime dateOfBirth) {
+		public static Customer CreateCustomer(string firstName, string lastName, DateTime dob) {
 			Customer customer = new Customer() { 
-				Name = name,
-				DateOfBirth = dateOfBirth
+				FirstName = firstName,
+				LastName = lastName,
+				DateOfBirth = dob
 			};
 
 			return customer;
