@@ -10,10 +10,9 @@ namespace Example05 {
 
 			//Console console = new Console();
 
+			double result = Math.Sqrt(9);
 
-			// ----------
-
-			Database.Create("Whatever");
+			Database.Create("Something");
 		}
 	}
 }

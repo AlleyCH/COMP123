@@ -6,33 +6,36 @@ namespace Example04 {
 			// EXCEPTIONS
 			// Exceptions are errors.
 
-			Console.WriteLine("Please input your age: ");
-			int age;
-			
-			try {
-				// Code that may raise an error goes here.
-				age = int.Parse(Console.ReadLine());
+			while (true) {
+				Console.WriteLine("Please input your age: ");
+				int age;
 
-				// Age cannot be negative!
-				if (age < 0) {
-					throw new Exception("Age cannot be negative!"); // <-- Manually throwing an error.
+				try {
+					// Where code goes.
+					// Always executed.
+					age = int.Parse(Console.ReadLine());
+
+					if (age < 0) {
+						throw new Exception("Age cannot be negative!"); // <-- Manually throwing an error.
+					}
+
+					Console.WriteLine($"Your age is {age}.");
+
+					break;
+				}
+				catch (Exception e) {
+					// What to do if an error is thrown in the try block.
+					// Only executed if the try block fails.
+
+					Console.ForegroundColor = ConsoleColor.Red;
+					Console.WriteLine($"Error! Please try again. {e.Message}\n");
+					Console.ForegroundColor = ConsoleColor.White;
+				}
+				finally {
+					// Optional
+					// Code to be executed regardless of whether an exception was raised.
 				}
 			}
-			catch (Exception e) {
-				// What needs to happen in case something goes wrong.
-				Console.ForegroundColor = ConsoleColor.Red;
-				Console.WriteLine($"Error! Please try again.");
-				Console.WriteLine(e.Message);
-				Console.ForegroundColor = ConsoleColor.White;
-
-				return;
-			}
-			finally {
-				// Optional block.
-				// Code that goes here gets executed regardless of whether an exception was raised.
-			}
-
-			Console.WriteLine($"Your age is {age}.");
 		}
 	}
 }

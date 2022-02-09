@@ -4,28 +4,29 @@ namespace Example05.Utilities {
 	public static class Database {
 		// A class that encapsulates database functionality.
 		// I.e. CRUD operations
-		// Static classes can only have static methods.
+		// Can only contain static methods.
 
 		// FIELDS
-		private static readonly string connectionString = "Some connection string";
+		private static readonly string connectionString = "Connection";
 
 		// PROPERTIES
-		public static string Constant { 
+		public static int Constant { 
 			get {
-				return "VALUE";
+				return 5;
 			}
 		}
 
-		// CONSTRUCTORS
+		// CONSTRUCTOR
 		static Database() { 
 			// Static constructor.
-			// Static initialization logic.
+			// Static Initialization logic.
+			// Read connection string from config file.
 		}
 
 		// METHODS
 		public static void Create(object entry) {
 			// Fancy database logic goes here.
-			Console.WriteLine("Entry inserted into database!");
+			Console.WriteLine("Entry inserted successfully!");
 		}
 
 		public static object Get(string id) {
