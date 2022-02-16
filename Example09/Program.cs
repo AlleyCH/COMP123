@@ -7,10 +7,10 @@ namespace Example09 {
 	class Program {
 		static void Main(string[] args) {
 			// SERIALIZATION
-			// A technique that can be used to convert virtual objects to files that a computer can easily process (read or write).
+			// A technique that can be used to convert virtual objects to files that a computer can easily process (read and write).
 
-			// Creating an object to be serialized.
-			Product product = new Product() { 
+			// Create an object to be serialized.
+			Product product = new Product() {
 				Name = "Guitar",
 				Description = "A very cool guitar.",
 				Price = 14999.00
@@ -18,22 +18,22 @@ namespace Example09 {
 
 			// Serializing:
 
+			// Creating a serializer.
 			// In this example we will serialize objects as XML.
-			// In order to serialize objects, I need a serializer.
 			XmlSerializer serializer = new XmlSerializer(typeof(Product));
 
-			// Streams are required to serialize.
+			// Streams are quired to serialize.
 			using (Stream stream = new FileStream($"C:\\temp\\{product.ProductID}.xml", FileMode.Create)) {
 				serializer.Serialize(stream, product);
 			}
 
-			Console.WriteLine($"Object {product.ProductID} serialized successfully! \n");
+			Console.WriteLine($"Product {product.ProductID} successfully serialized!");
 
-			// =======================================================
+			// ===============================================
 
 			// Deserializing:
 
-			// A serializer is also needed to read XML files from the file system.
+			// A serializer is also needed to read XML files.
 			// We are also going to need a stream to read the file.
 
 			string[] files = Directory.GetFiles("C:\\temp");
@@ -41,8 +41,8 @@ namespace Example09 {
 			foreach (string file in files) {
 				using (Stream stream = new FileStream(file, FileMode.Open)) {
 					Product loadedProduct = (Product)serializer.Deserialize(stream);
-					Console.WriteLine("Object deserialized successfully!");
 
+					Console.WriteLine("Object successfully deserialized! \n");
 					Console.WriteLine(loadedProduct.ToString());
 				}
 			}

@@ -17,64 +17,72 @@ namespace Example07 {
 			// A list's size changes throughout the list's lifecycle.
 			List<string> list = new List<string>();
 			list.Add("Hello");
-			list.Add("World");
+			list.Add("World!");
 
 			// ARRAY LISTS
-			// Array Lists are dynamic in size.
-			// Array Lists are dynamic in type (array list elements can be of different types).
+			// Array lists are dynamic in size.
+			// Array lists are dynamic in type (array list elements can be of different types).
 			// An array list's size changes throughout the array list's lifecycle.
 			ArrayList arrayList = new ArrayList();
-			arrayList.Add("I can add a string");
+			arrayList.Add("Hello");
 			arrayList.Add(1);
 
 			// STACKS
 			// Stacks are dynamic in size.
-			// Stacks are dynamic in type (all stack elements can be of different types).
-			// A stack's size changes throughout the stacks's lifecycle.
+			// Stacks are dynamic in type (stack elements can be of different types).
+			// A stack's size changes throughout the stack's lifecycle.
 			// FILO: First in, last out.
 			Stack stack = new Stack();
-			stack.Push("I can add a string"); // First item on the stack
-			stack.Push(1); // Second item on the stack
-			stack.Push(true); // Third item on the stack
+			stack.Push("I can add a string"); // First
+			stack.Push(1); // Second
+			stack.Push(true); // Third
 
-			var last = stack.Pop(); // Last added item (third) "pops" out of the stack and is returned.
+			var last = stack.Pop();
 
-			// QUEUE
+			// QUEUES
 			// Queues are dynamic in size.
-			// Queues can be dynamic in type (all queue elements can be of different types).
+			// Queues can be dynamic in type (queue elements can be of different types);
 			// A queue's size changes throughout the queue's lifecycle.
 			// FIFO: First in, first out.
 			Queue queue = new Queue(); // Dynamic in type
 			Queue<string> queue2 = new Queue<string>(); // Static in type
 
-			queue.Enqueue("I can add a string"); // First item in the queue
-			queue.Enqueue(1); // Second item in the queue
-			queue.Enqueue(false); // Third item in the queue
+			queue.Enqueue("I can add a string");
+			queue.Enqueue(1);
+			queue.Enqueue(false);
 
-			var first = queue.Dequeue(); // First item in the queue is removed and returned.
+			// LINKED LISTS
+			// Linked lists are dynamic in size.
+			// Linked lists are static in type (linked list elements must be of the same type).
+			// A linked list's size changes throughout the linked list's lifecycle.
+			LinkedList<string> linkedList = new LinkedList<string>();
+			linkedList.AddFirst("First");
+			linkedList.AddLast("Last");
 
-			// DICTIONARY
+			var firstOnTheList = linkedList.First;
+			var next = firstOnTheList.Next;
+
+			// DICTIONARIES
 			// Dictionaries are dynamic in size.
-			// Dictionaries are static in type (all dictionary elements must be of the same type).
-			// A dictionary's size changes throughout the dictionary's lifecycle.
-			// Dictionaries have a key, which is associated with a value.
+			// Dictionaries are static in type (dictionary elements must be of the same type).
+			// A dictionary's size changes throughout the disctionary's lifecycle.
+			// Dictionaries have a key, whichis associated with a value.
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
-			dictionary.Add("1", "John"); // John's ID is 1.
-			dictionary.Add("2", "Mary"); // Mary's ID is 2.
-			dictionary.Add("3", "Peter"); // Peter's ID is 3.
+			dictionary.Add("123", "John");
+			dictionary.Add("321", "Mary");
 
-			string person = dictionary["1"]; // ID
+			var person = dictionary["123"];
 
-			// HASHTABLE
+			// HASHTABLES
 			// Hashtables are dynamic in size.
-			// Hashtables are dynamic in type (all hashtable elements can be of different types).
-			// A hashtable's size changes throughout the hashtables's lifecycle.
+			// Hashtables are dynamic in type (hashtable elements can be of different types).
+			// A hashtable's size changes throughout the hashtable's lifecycle.
 			// Hashtables have a key, which is associated with a value.
 			Hashtable hashtable = new Hashtable();
-			hashtable.Add("1", "John");
-			hashtable.Add(2, true);
+			hashtable.Add("123", "John");
+			hashtable.Add(1, true);
 
-			var item = hashtable[2];
+			var item = hashtable[1];
 		}
 	}
 }
