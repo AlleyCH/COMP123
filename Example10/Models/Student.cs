@@ -15,7 +15,7 @@
 
 		public override void Greet(string name) {
 			// Through inheritance, Student already has an implicit Greet definition.
-			// However, I can override the inherited definition by using the "override" keyword.
+			// However, the inherited definition can be overriden by using the "override" keyword.
 			// Sub-classes can have completely different implementations for inherited methods.
 			// As this is just an example, we will keep the implementation the same.
 

@@ -31,13 +31,13 @@ namespace Example10 {
 			// POLYMORPHISM
 			// Polymorphism is the concept of acknowledging sub-types and their super-types.
 			// Through polymorphism, objects of a sub-type may be treated as an instance of their super-type.
-			// Example: All employees are persons, but not all persons are employees.
-			// Example: All trucks are vehicles, but not all vehicles are trucks.
+			// Example: An Employee is always a Person, but a Person won't always be an Employee.
+			// Example: A Truck will always be a Vehicle, but a Vehicle won't always be a Truck.
 
-			// I can declare objects polymorphically.
+			// Objects can be polymorphically declared.
 			Person john = new Student();
 
-			// I can declare collections polymorphically.
+			// Collections can be polymorphically declared.
 			// Student and Employee are just a sub-type of Person.
 			// Hence, they can be added to a Person list.
 			List<Person> people = new List<Person>();
