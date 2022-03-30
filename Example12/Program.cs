@@ -11,7 +11,7 @@ namespace Example12 {
 			// Therefore:
 			// Student objects are instances of IStudyingPerson.
 
-			IStudyingPerson person = new Student();
+			IStudyingPerson student = new Student();
 
 			// Interfaces cannot be instantiated. The line below errors.
 			//IStudyingPerson person = new IStudyingPerson();

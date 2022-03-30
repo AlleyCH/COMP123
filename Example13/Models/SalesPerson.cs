@@ -15,8 +15,7 @@ namespace Example13.Models {
 			this.SalesPersonID = Guid.NewGuid().ToString();
 		}
 
-		// Abstract methods are not implemented in the class 
-		// they are defined.
+		// Abstract methods are not implemented in the class they are defined.
 		// It's the sub-type's responsibility to implement this method.
 		public abstract void Sell(T item);
 	}

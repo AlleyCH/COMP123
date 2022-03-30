@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Example14.Models {
-	public class RealEstateAgent : ISalesPerson<House> { // <-- Specialized class. T = House.
-		public void Sell(House item) {
+	public class RealEstateAgent : ISalesPerson<House> { // <-- Specialized class. T = house.
+		public void Sell(House house) {
 			Console.WriteLine("House is sold!"); // <-- No no no.
 		}
 	}
