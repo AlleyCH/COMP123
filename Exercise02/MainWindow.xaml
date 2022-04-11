@@ -9,8 +9,8 @@
 		Height="520" 
 		Width="1000"
 		ResizeMode="NoResize">
-	<!--Outer Grid-->
-	<Grid Margin="5">
+    <!--Outer Grid-->
+    <Grid Margin="5">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="2*"/>
@@ -27,8 +27,8 @@
 				<RowDefinition Height="4*"/>
 			</Grid.RowDefinitions>
 
-			<Label Content="Accounts" FontWeight="Bold"/>
-			<DataGrid Grid.Row="1"></DataGrid>
+			<Label Content="Accounts" FontWeight="Bold" Grid.Row="0"/>
+			<DataGrid Grid.Row="1"/>
 		</Grid>
 
 		<!--Account Creation Pane-->
@@ -72,7 +72,7 @@
 
 			<StackPanel Margin="0 0 5 0" Grid.Row="2" Grid.Column="0">
 				<Label Content="Date of Birth"/>
-				<DatePicker />
+				<DatePicker/>
 			</StackPanel>
 
 			<StackPanel Margin="0 0 5 0" Grid.Row="2" Grid.Column="1">
@@ -102,6 +102,117 @@
 
 			<StackPanel Margin="0 20 5 0" Grid.Row="5" Grid.Column="0">
 				<Button Content="Create Account"/>
+			</StackPanel>
+
+			<StackPanel Margin="0 20 5 0" Grid.Row="5" Grid.Column="1">
+				<Button Content="Reset"/>
+			</StackPanel>
+		</Grid>
+
+		<!--Transactions Pane-->
+		<Grid Margin="0 0 5 0" Grid.Row="0" Grid.Column="1">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="4*"/>
+			</Grid.RowDefinitions>
+
+			<Label Content="Transactions" FontWeight="Bold" Grid.Row="0"/>
+			<DataGrid Grid.Row="1"/>
+		</Grid>
+
+		<!--Transaction Creation Pane-->
+		<Grid Margin="0 10 5 0" Grid.Row="1" Grid.Column="1">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<StackPanel Margin="0 0 5 0" Grid.Row="0" Grid.Column="0">
+				<Label Content="Selected Account Number"/>
+				<TextBox IsEnabled="False"/>
+			</StackPanel>
+
+			<StackPanel Margin="0 0 5 0" Grid.Row="0" Grid.Column="1">
+				<Label Content="Selected Account Type"/>
+				<TextBox IsEnabled="False"/>
+			</StackPanel>
+
+			<StackPanel Margin="0 0 5 0" Grid.Row="1" Grid.Column="0">
+				<Label Content="First Name"/>
+				<TextBox IsEnabled="False"/>
+			</StackPanel>
+
+			<StackPanel Margin="0 0 5 0" Grid.Row="1" Grid.Column="1">
+				<Label Content="Last Name"/>
+				<TextBox IsEnabled="False"/>
+			</StackPanel>
+
+			<StackPanel Margin="0 0 5 0" Grid.Row="2" Grid.Column="0">
+				<Label Content="Date of Birth"/>
+				<DatePicker IsEnabled="False"/>
+			</StackPanel>
+
+			<StackPanel Margin="0 0 5 0" Grid.Row="2" Grid.Column="1">
+				<Label Content="Street and Number"/>
+				<TextBox IsEnabled="False"/>
+			</StackPanel>
+
+			<Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+
+
+				<StackPanel Margin="0 0 5 0" Grid.Row="0" Grid.Column="0">
+					<Label Content="Complement"/>
+					<TextBox IsEnabled="False"/>
+				</StackPanel>
+
+				<StackPanel Margin="0 0 5 0" Grid.Row="0" Grid.Column="1">
+					<Label Content="City"/>
+					<TextBox IsEnabled="False"/>
+				</StackPanel>
+
+				<StackPanel Margin="0 0 5 0" Grid.Row="0" Grid.Column="2">
+					<Label Content="Province"/>
+					<TextBox IsEnabled="False"/>
+				</StackPanel>
+
+				<StackPanel Margin="0 0 5 0" Grid.Row="1" Grid.Column="0">
+					<Label Content="Postal Code"/>
+					<TextBox IsEnabled="False"/>
+				</StackPanel>
+
+				<StackPanel Margin="0 0 5 0" Grid.Row="1" Grid.Column="1">
+					<Label Content="Amount ($)"/>
+					<TextBox />
+				</StackPanel>
+
+				<StackPanel Margin="0 0 5 0" Grid.Row="1" Grid.Column="2">
+					<Label Content="Type"/>
+					<ComboBox>
+						<ComboBoxItem Content="Debit"/>
+						<ComboBoxItem Content="Credit"/>
+					</ComboBox>
+				</StackPanel>
+			</Grid>
+
+			<StackPanel Margin="0 20 5 0" Grid.Row="5" Grid.Column="0">
+				<Button Content="Create Transaction"/>
 			</StackPanel>
 
 			<StackPanel Margin="0 20 5 0" Grid.Row="5" Grid.Column="1">

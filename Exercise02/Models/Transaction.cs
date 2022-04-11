@@ -9,6 +9,8 @@ namespace Exercise02.Models {
 		private double value;
 
 		public string TransactionID { get; set; }
+		public DateTime ProcessedOn { get; set; }
+		public TransactionType Type { get; set; }
 		public double Value { 
 			get {
 				return this.value;
@@ -20,8 +22,6 @@ namespace Exercise02.Models {
 					throw new Exception("ERROR: Transaction value cannot be negative!");
 			}
 		}
-		public DateTime ProcessedOn { get; set; }
-		public TransactionType Type { get; set; }
 
 		public Transaction() {
 			this.TransactionID = Guid.NewGuid().ToString();

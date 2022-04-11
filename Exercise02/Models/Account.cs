@@ -11,7 +11,7 @@ namespace Exercise02.Models {
 		public Customer Customer { get; set; }
 		public AccountType Type { get; set; }
 		public List<Transaction> Transactions { get; set; }
-		public double Balance { 
+		public double Balance {
 			get {
 				double total = 0;
 
@@ -23,7 +23,7 @@ namespace Exercise02.Models {
 				}
 
 				return total;
-			}		
+			}
 		}
 
 		public Account() {
