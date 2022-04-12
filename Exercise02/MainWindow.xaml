@@ -28,7 +28,7 @@
 			</Grid.RowDefinitions>
 
 			<Label Content="Accounts" FontWeight="Bold" Grid.Row="0"/>
-			<DataGrid Grid.Row="1"/>
+			<DataGrid Name="dataAccounts" Grid.Row="1" IsReadOnly="True"/>
 		</Grid>
 
 		<!--Account Creation Pane-->
@@ -48,12 +48,12 @@
 
 			<StackPanel Margin="0 0 5 0" Grid.Row="0" Grid.Column="0">
 				<Label Content="Account Number"/>
-				<TextBox IsEnabled="False"/>
+				<TextBox Name="txtAccountNumber" IsEnabled="False"/>
 			</StackPanel>
 
 			<StackPanel Grid.Row="0" Grid.Column="1">
 				<Label Content="Account Type"/>
-				<ComboBox>
+				<ComboBox Name="comboAccountType">
 					<ComboBoxItem Content="Checking"/>
 					<ComboBoxItem Content="Savings"/>
 					<ComboBoxItem Content="Investment"/>
@@ -62,50 +62,50 @@
 
 			<StackPanel Margin="0 0 5 0" Grid.Row="1" Grid.Column="0">
 				<Label Content="First Name"/>
-				<TextBox />
+				<TextBox Name="txtFirstName"/>
 			</StackPanel>
 
 			<StackPanel Grid.Row="1" Grid.Column="1">
 				<Label Content="Last Name"/>
-				<TextBox />
+				<TextBox Name="txtLastName"/>
 			</StackPanel>
 
 			<StackPanel Margin="0 0 5 0" Grid.Row="2" Grid.Column="0">
 				<Label Content="Date of Birth"/>
-				<DatePicker/>
+				<DatePicker Name="dateDOB"/>
 			</StackPanel>
 
 			<StackPanel Grid.Row="2" Grid.Column="1">
 				<Label Content="Street and Number"/>
-				<TextBox />
+				<TextBox Name="txtAddressLine1"/>
 			</StackPanel>
 
 			<StackPanel Margin="0 0 5 0" Grid.Row="3" Grid.Column="0">
 				<Label Content="Complement"/>
-				<TextBox />
+				<TextBox Name="txtAddressLine2"/>
 			</StackPanel>
 
 			<StackPanel Grid.Row="3" Grid.Column="1">
 				<Label Content="City"/>
-				<TextBox />
+				<TextBox Name="txtCity"/>
 			</StackPanel>
 
 			<StackPanel Margin="0 0 5 0" Grid.Row="4" Grid.Column="0">
 				<Label Content="Province"/>
-				<TextBox />
+				<TextBox Name="txtProvince"/>
 			</StackPanel>
 
 			<StackPanel Grid.Row="4" Grid.Column="1">
 				<Label Content="Postal Code"/>
-				<TextBox />
+				<TextBox Name="txtPostalCode"/>
 			</StackPanel>
 
 			<StackPanel Margin="0 20 5 0" Grid.Row="5" Grid.Column="0">
-				<Button Content="Create Account"/>
+				<Button Name="btnCreateAccount" Content="Create Account"/>
 			</StackPanel>
 
 			<StackPanel Margin="0 20 0 0" Grid.Row="5" Grid.Column="1">
-				<Button Content="Reset"/>
+				<Button Name="btnResetAccounts" Content="Reset"/>
 			</StackPanel>
 		</Grid>
 
